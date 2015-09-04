@@ -10,6 +10,14 @@ sudo gem install path/sass-3.14.18.gem
 // 检查安装版本
 sass -v
 ```
+#### 更新
+```
+gem update sass
+```
+#### 卸载
+```
+gem uninstall sass
+```
 #### 编译
 * 命令编译
 
@@ -73,14 +81,6 @@ gulp.task('watch', function() {
 gulp.task('default', ['sass','watch']);
 ```
 
-#### 更新
-```
-gem update sass
-```
-#### 卸载
-```
-gem uninstall sass
-```
 ## Sass与Scss的区别
 .sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
 
