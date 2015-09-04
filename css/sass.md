@@ -161,6 +161,14 @@ nav a { display: block; padding: 6px 12px; text-decoration: none; }
 // compressed
 nav ul{margin:0;padding:0;list-style:none}nav li{display:inline-block}nav a{display:block;padding:6px 12px;text-decoration:none}
 ```
+#### Sass调试
+```
+// 早期版本
+sass --watch --scss --sourcemap style.scss:style.css
+// Sass3.3 版本之上不需要添加 --sourcemap
+sass --watch style.scss:style.css
+```
+![](sass debug.gif)
 ## Sass与Scss的区别
 .sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
 
