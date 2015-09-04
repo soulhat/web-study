@@ -38,8 +38,10 @@ sass --watch test.scss:test.css
   * Prepros（https://prepros.io/）
 * 自动化编译
   * grunt
+  * gulp
   
 ```
+// grunt
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -62,9 +64,10 @@ module.exports = function(grunt) {
     grunt.registerTask('default',['watch']);
 }
 ```
-  * gulp
+
 
 ```
+// gulp
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
