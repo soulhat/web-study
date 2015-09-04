@@ -12,6 +12,9 @@ sass -v
 ```
 #### 编译
 * 命令编译
+* GUI工具编译
+* 自动化编译
+
 ```
 // sass
 sass --watch test.sass:test.css
