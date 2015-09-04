@@ -325,13 +325,13 @@ button {
 }
 // 传多个参数
 @mixin center($width,$height){
-  width: $width;
-  height: $height;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -($height) / 2;
-  margin-left: -($width) / 2;
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height) / 2;
+    margin-left: -($width) / 2;
 }
 .box-center {
   @include center(500px,300px);
