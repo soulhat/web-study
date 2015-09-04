@@ -351,3 +351,23 @@ button {
     @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));
 }
 ```
+#### 继承与扩展
+```
+.btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+  @extend .btn;
+}
+
+.btn-second {
+  background-color: orange;
+  color: #fff;
+  @extend .btn;
+}
+```
