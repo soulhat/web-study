@@ -107,19 +107,19 @@ sass --watch test.scss:test.css --style compressed
 ```
 // sass
 nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li { display: inline-block; }
-
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    li { display: inline-block; }
+    
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
 }
 ```
 ```
@@ -270,5 +270,14 @@ nav {
         clear:both;
         overflow: hidden;
     }
+}
+```
+#### 混合宏
+1、声明混合宏
+```
+// 不带参数混合宏
+@mixin border-radius{
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 ```
