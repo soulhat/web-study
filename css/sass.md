@@ -28,7 +28,8 @@ sass --watch test.scss:test.css
   * CodeKit（https://incident57.com/codekit/index.html）
   * Prepros（https://prepros.io/）
 * 自动化编译
-
+  * grunt
+  * gulp
 
 #### 更新
 ```
