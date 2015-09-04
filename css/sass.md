@@ -205,4 +205,18 @@ body {
 $width: 200px;
 // !default表示默认值
 $color: #f00 !default;
+// sass 的默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。
+$baseLineHeight: 2;
+$baseLineHeight: 1.5 !default;
+body{
+    line-height: $baseLineHeight; 
+}
+```
+#### 变量的调用
+```
+body {
+    width: $width;
+    color: $color;
+    line-height: $baseLineHeight;
+}
 ```
