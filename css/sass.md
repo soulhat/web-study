@@ -295,3 +295,13 @@ nav {
     }
 }
 ```
+2、调用混合宏
+```
+@mixin border-radius{
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+button {
+    @include border-radius;
+}
+```
