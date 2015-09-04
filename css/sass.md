@@ -446,4 +446,19 @@ $flag: "status";
   * join函数（join function） 可以将多个值列表连结在一起；
   * append函数（append function） 可以在值列表中添加值； 
   * @each规则（@each rule） 则能够给值列表中的每个项目添加样式。
-#### 加法
+
+#### 运算
+```
+// 加法
+.box {
+    width: 20px + 8in;
+}
+// 减法
+$full-width: 960px;
+$sidebar-width: 200px;
+
+.content {
+    width: $full-width -  $sidebar-width;
+}
+
+```
