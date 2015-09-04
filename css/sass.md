@@ -372,3 +372,12 @@ button {
     @extend .btn;
 }
 ```
+#### 占位符 %placeholder
+```
+%mt5 {
+    margin-top: 5px;
+}
+%pt5{
+    padding-top: 5px;
+}
+```
