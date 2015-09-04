@@ -13,6 +13,9 @@ sass -v
 #### 编译
 * 命令编译
 ```
+sass <path>/style.scss:<path>/style.css
+// 多文件编译
+
 // sass
 sass --watch test.sass:test.css
 // scss
