@@ -1,7 +1,7 @@
 # web develop guide
 ## Css学习
 ### Css预处理器
-#### Sass
+#### Sass(Scss)
 #### LESS
 #### Stylus
 ### 混合app开发
