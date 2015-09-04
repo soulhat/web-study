@@ -199,3 +199,10 @@ body {
   color: $primary-color;
 }
 ```
+#### 声明变量
+```
+// 声明变量的符号“$”+变量名称:赋予变量的值;
+$width: 200px;
+// !default表示默认值
+$color: #f00 !default;
+```
