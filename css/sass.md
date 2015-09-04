@@ -220,3 +220,34 @@ body {
     line-height: $baseLineHeight;
 }
 ```
+#### 变量的作用域
+```
+$color: orange !default;//定义全局变量(在选择器、函数、混合宏...的外面定义的变量为全局变量)
+.block {
+  color: $color;//调用全局变量
+}
+em {
+  $color: red;//定义局部变量
+  a {
+    color: $color;//调用局部变量
+  }
+}
+span {
+  color: $color;//调用全局变量
+}
+```
+#### 嵌套
+* 选择器嵌套
+```
+nav {
+  a {
+    color: red;
+
+    header & {
+      color:green;
+    }
+  }  
+}
+```
+* 属性嵌套
+* 伪类嵌套
