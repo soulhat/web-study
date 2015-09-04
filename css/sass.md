@@ -305,3 +305,35 @@ button {
     @include border-radius;
 }
 ```
+3、混合宏参数
+```
+// 传一个不带值的参数
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+.box {
+  @include border-radius(3px);
+}
+// 传一个带值的参数
+@mixin border-radius($radius:3px){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+.btn {
+  @include border-radius;
+}
+// 传多个参数
+@mixin center($width,$height){
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($height) / 2;
+  margin-left: -($width) / 2;
+}
+.box-center {
+  @include center(500px,300px);
+}
+```
