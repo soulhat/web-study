@@ -250,4 +250,12 @@ nav {
 }
 ```
 * 属性嵌套
+```
+.box {
+  border: {
+   top: 1px solid red;
+   bottom: 1px solid green;
+  }
+}
+```
 * 伪类嵌套
