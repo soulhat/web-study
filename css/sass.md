@@ -12,6 +12,8 @@ sass -v
 ```
 ####编译
 ```
+//sass
 sass --watch test.sass:test.css
+//scss
 sass --watch test.scss:test.css
 ```
