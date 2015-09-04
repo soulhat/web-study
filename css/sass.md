@@ -40,6 +40,7 @@ sass --watch test.scss:test.css
 * 自动化编译
   * grunt
   * gulp
+
 ###### 例子
 ```
 // grunt
@@ -101,6 +102,7 @@ sass --watch test.scss:test.css --style compact
 ```
 sass --watch test.scss:test.css --style compressed
 ```
+
 ###### 例子
 ```
 // sass
@@ -120,6 +122,41 @@ nav {
   }
 }
 ```
+```
+// nested
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
+```
+```
+// expanded
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+// compact
+nav ul { margin: 0; padding: 0; list-style: none; }
+nav li { display: inline-block; }
+nav a { display: block; padding: 6px 12px; text-decoration: none; }
+```
+
 ## Sass与Scss的区别
 .sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
 
