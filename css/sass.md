@@ -287,11 +287,11 @@ nav {
 }
 // 复杂的混合宏
 @mixin box-shadow($shadow...) {
-  @if length($shadow) >= 1 {
-    @include prefixer(box-shadow, $shadow);
-  } @else{
-    $shadow:0 0 4px rgba(0,0,0,.3);
-    @include prefixer(box-shadow, $shadow);
-  }
+    @if length($shadow) >= 1 {
+        @include prefixer(box-shadow, $shadow);
+    } @else{
+        $shadow:0 0 4px rgba(0,0,0,.3);
+        @include prefixer(box-shadow, $shadow);
+    }
 }
 ```
