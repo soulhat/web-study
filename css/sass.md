@@ -13,6 +13,7 @@ sass -v
 #### 编译
 * 命令编译
 ```
+// 单文件
 sass <path>/style.scss:<path>/style.css
 // 多文件编译
 sass <path>/sass/:<path>/css/
