@@ -309,16 +309,16 @@ button {
 ```
 // 传一个不带值的参数
 @mixin border-radius($radius){
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
 }
 .box {
-  @include border-radius(3px);
+    @include border-radius(3px);
 }
 // 传一个带值的参数
 @mixin border-radius($radius:3px){
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
 }
 .btn {
     @include border-radius;
@@ -334,6 +334,6 @@ button {
     margin-left: -($width) / 2;
 }
 .box-center {
-  @include center(500px,300px);
+    @include center(500px,300px);
 }
 ```
