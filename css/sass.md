@@ -460,5 +460,17 @@ $sidebar-width: 200px;
 .content {
     width: $full-width -  $sidebar-width;
 }
+// 乘法
+.box {
+  width:10px * 2;  
+}
+// 除法
+// 如果数值或它的任意部分是存储在一个变量中或是函数的返回值。
+// 如果数值被圆括号包围。
+// 如果数值是另一个数学表达式的一部分。
+.box {
+  width: (100px / 2);  
+}
+
 
 ```
