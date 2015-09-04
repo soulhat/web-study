@@ -12,6 +12,7 @@ sass -v
 ```
 #### 编译
 * 命令编译
+
 ```
 // 单文件编译
 sass <path>/style.scss:<path>/style.css
@@ -29,7 +30,48 @@ sass --watch test.scss:test.css
   * Prepros（https://prepros.io/）
 * 自动化编译
   * grunt
+  
+```
+module.exports = function(grunt) {
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        sass: {
+            dist: {
+                files: {
+                    'style/style.css' : 'sass/style.scss'
+                }
+            }
+        },
+        watch: {
+            css: {
+                files: '**/*.scss',
+                tasks: ['sass']
+            }
+        }
+    });
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('default',['watch']);
+}
+```
   * gulp
+
+```
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+    gulp.src('./scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('./css'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('scss/*.scss', ['sass']);
+});
+
+gulp.task('default', ['sass','watch']);
+```
 
 #### 更新
 ```
