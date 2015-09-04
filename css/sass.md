@@ -352,22 +352,23 @@ button {
 }
 ```
 #### 继承与扩展
+
 ```
 .btn {
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
 }
 
 .btn-primary {
-  background-color: #f36;
-  color: #fff;
-  @extend .btn;
+    background-color: #f36;
+    color: #fff;
+    @extend .btn;
 }
 
 .btn-second {
-  background-color: orange;
-  color: #fff;
-  @extend .btn;
+    background-color: orange;
+    color: #fff;
+    @extend .btn;
 }
 ```
