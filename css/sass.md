@@ -15,7 +15,7 @@ sass -v
 ```
 sass <path>/style.scss:<path>/style.css
 // 多文件编译
-
+sass <path>/sass/:<path>/css/
 // sass
 sass --watch test.sass:test.css
 // scss
