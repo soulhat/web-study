@@ -259,3 +259,16 @@ nav {
 }
 ```
 * 伪类嵌套
+```
+.clearfix{
+&:before,
+&:after {
+    content:"";
+    display: table;
+  }
+&:after {
+    clear:both;
+    overflow: hidden;
+  }
+}
+```
