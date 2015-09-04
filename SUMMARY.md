@@ -1,5 +1,5 @@
 # Summary
 
 * [Sass](css/sass.md)
-* ionic
+* [ionic](app/ionic.md)
 
