@@ -394,3 +394,51 @@ button {
     }
 }
 ```
+#### 混合宏 VS 继承 VS 占位符
+![](sass include extend.png)
+#### 插值#{}
+```
+$properties: (margin, padding);
+@mixin set-value($side, $value) {
+    @each $prop in $properties {
+        #{$prop}-#{$side}: $value;
+    }
+}
+.login-box {
+    @include set-value(top, 14px);
+}
+```
+```
+@mixin generate-sizes($class, $small, $medium, $big) {
+    .#{$class}-small { font-size: $small; }
+    .#{$class}-medium { font-size: $medium; }
+    .#{$class}-big { font-size: $big; }
+}
+@include generate-sizes("header-text", 12px, 20px, 40px);
+```
+```
+%updated-status {
+    margin-top: 20px;
+    background: #F00;
+}
+.selected-status {
+    font-weight: bold;
+}
+$flag: "status";
+.navigation {
+    @extend %updated-#{$flag};
+    @extend .selected-#{$flag};
+}
+```
+#### 注释
+* 类似 CSS 的注释方式，使用"/* ”开头，结属使用 ”*/"
+* 类似 JavaScript 的注释方式，使用"//"
+
+两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示
+#### 数据类型
+* 数字：如，1、 2、 13、 10px；
+* 字符串：有引号字符串或无引号字符串，如，"foo"、 'bar'、 baz；
+* 颜色：如，blue、 #04a3f9、 rgba(255,0,0,0.5)；
+* 布尔型：如，true、 false；
+* 空值：如，null；
+* 值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、 Helvetica, Arial, sans-serif。
