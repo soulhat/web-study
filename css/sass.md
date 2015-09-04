@@ -436,9 +436,14 @@ $flag: "status";
 
 两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示
 #### 数据类型
-* 数字：如，1、 2、 13、 10px；
-* 字符串：有引号字符串或无引号字符串，如，"foo"、 'bar'、 baz；
-* 颜色：如，blue、 #04a3f9、 rgba(255,0,0,0.5)；
-* 布尔型：如，true、 false；
+* 数字：如，1、2、13、10px；
+* 字符串：有引号字符串或无引号字符串，如，"foo"、'bar'、baz；
+* 颜色：如，blue、#04a3f9、rgba(255,0,0,0.5)；
+* 布尔型：如，true、false；
 * 空值：如，null；
-* 值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、 Helvetica, Arial, sans-serif。
+* 值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、Helvetica, Arial, sans-serif。
+  * nth函数（nth function） 可以直接访问值列表中的某一项；
+  * join函数（join function） 可以将多个值列表连结在一起；
+  * append函数（append function） 可以在值列表中添加值； 
+  * @each规则（@each rule） 则能够给值列表中的每个项目添加样式。
+#### 加法
