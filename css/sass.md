@@ -19,6 +19,7 @@ gem update sass
 gem uninstall sass
 ```
 #### 编译
+##### 编译方式
 * 命令编译
 
 ```
@@ -83,7 +84,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass','watch']);
 ```
-#### 编译输出方式
+##### 编译输出方式
 * 嵌套输出方式 nested
 * 展开输出方式 expanded  
 * 紧凑输出方式 compact 
