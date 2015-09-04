@@ -240,13 +240,13 @@ span {
 * 选择器嵌套
 ```
 nav {
-      a {
-        color: red;
-    
-        header & {
-          color:green;
-        }
-      }  
+  a {
+    color: red;
+
+    header & {
+      color:green;
+    }
+  }  
 }
 ```
 * 属性嵌套
