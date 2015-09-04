@@ -26,6 +26,9 @@ gem update sass
 gem uninstall sass
 ```
 ## Sass与Scss的区别
+.sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
+
+.scss使用的是Sass的新语法规则，也就是 SCSS 语法规则（类似 CSS 语法格式，代码都包裹在一对大括号里，并且末尾结束处都有一个分号）
 ```
 // css样式
 body {
