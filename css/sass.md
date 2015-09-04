@@ -83,7 +83,11 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass','watch']);
 ```
-
+### 输出方式
+* 嵌套输出方式 nested
+* 展开输出方式 expanded  
+* 紧凑输出方式 compact 
+* 压缩输出方式 compressed
 ## Sass与Scss的区别
 .sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
 
