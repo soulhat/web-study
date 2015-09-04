@@ -10,3 +10,7 @@ sudo gem install path/sass-3.14.18.gem
 //检查安装版本
 sass -v
 ```
+####编译
+```
+sass --watch test.sass:test.css
+```
