@@ -125,30 +125,30 @@ nav {
 ```
 // nested
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 nav li {
   display: inline-block; }
 nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none; }
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none; }
 ```
 ```
 // expanded
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 nav li {
-  display: inline-block;
+    display: inline-block;
 }
 nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
 }
 ```
 ```
@@ -176,8 +176,8 @@ sass --watch style.scss:style.css
 ```
 // css样式
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+    font: 100% Helvetica, sans-serif;
+    color: #333;
 }
 ```
 ```
@@ -186,8 +186,8 @@ $font-stack: Helvetica, sans-serif
 $primary-color: #333
 
 body
-  font: 100% $font-stack
-  color: $primary-color
+    font: 100% $font-stack
+    color: $primary-color
 ```
 ```
 // Scss实现
@@ -195,8 +195,8 @@ $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
 }
 ```
 #### 声明变量
