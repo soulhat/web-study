@@ -677,8 +677,154 @@ nth($list,$n)
 >> append((blue green),red,comma)
 (#0000ff, #008000, #ff0000)
 ```
+##### zip()
+```
+// zip()函数将多个列表值转成一个多维的列表
+// 在使用zip()函数时，每个单一的列表个数值必须是相同的
+>> zip(1px 2px 3px,solid dashed dotted,green blue red)
+((1px "solid" #008000), (2px "dashed" #0000ff), (3px "dotted" #ff0000))
+```
+##### index()
+```
+// ndex() 函数类似于索引一样，主要让你找到某个值在列表中所处的位置。在 Sass 中，第一个值就是1，第二个值就是 2，依此类推
+>> index(1px solid red,dotted) //列表中没有找到 dotted
+false
+>> index(1px solid red,solid) //列表中找到 solid 值，并且返回他的位置值 2
+2
+```
+##### Introspection
+```
+// type-of() 函数主要用来判断一个值是属于什么类型
+>> type-of(100)
+"number"
+>> type-of("asdf")
+"string"
+>> type-of(true)
+"bool"
+>> type-of(#fff)
+"color"
+>> type-of(1 / 2 = 1)
+"string"
+// unit() 函数主要是用来获取一个值所使用的单位，碰到复杂的计算时，其能根据运算得到一个“多单位组合”的值，不过只允许乘、除运算；但加、减碰到不同单位时，unit() 函数将会报错，除 px 与 cm、mm 运算之外
+>> unit(100)
+""
+>> unit(100px)
+"px"
+>> unit(20%)
+"%"
+>> unit(1em)
+"em"
+>> unit(10px * 3em)
+"em*px"
+>> unit(10px / 3em)
+"px/em"
+// unitless() 函数相对来说简单明了些，只是用来判断一个值是否带有单位，如果不带单位返回的值为 true，带单位返回的值为 false
+>> unitless(100)
+true
+>> unitless(100px)
+false
+>> unitless(100em)
+false
+>> unitless(100%)
+false
+>> unitless(1 /2 )
+true
+// comparable() 函数主要是用来判断两个数是否可以进行“加，减”以及“合并”。如果可以返回的值为 true，如果不可以返回的值是 false
+>> comparable(2px,1px)
+true
+>> comparable(2px,1%)
+false
+>> comparable(2px,1em)
+false
+```
+##### Miscellaneous
+```
+// 在这里把 Miscellaneous 函数称为三元条件函数，主要因为他和 JavaScript 中的三元判断非常的相似。他有两个值，当条件成立返回一种值，当条件不成立时返回另一种值
+if($condition,$if-true,$if-false)
+>> if(true,1px,2px)
+1px
+>> if(false,1px,2px)
+2px
+```
+##### Map
+```
+// Sass 的 map 常常被称为数据地图，也有人称其为数组，因为他总是以 key:value 成对的出现，但其更像是一个 JSON 数据。
+$map: (
+    $key1: value1,
+    $key2: value2,
+    $key3: value3
+)
+$map: (
+    key1: value1,
+    key2: (
+        key-1: value-1,
+        key-2: value-2,
+    ),
+    key3: value3
+);
+// map-get($map,$key) 函数的作用是根据 $key 参数，返回 $key 在 $map 中对应的 value 值。如果 $key 不存在 $map中，将返回 null 值。
+$social-colors: (
+    dribble: #ea4c89,
+    facebook: #3b5998,
+    github: #171515,
+    google: #db4437,
+    twitter: #55acee
+);
+.btn-dribble{
+  color: map-get($social-colors,facebook);
+}
+// map-has-key($map,$key) 函数将返回一个布尔值。当 $map 中有这个 $key，则函数返回 true，否则返回 false。
+@if map-has-key($social-colors,faceboo){
+    .btn-facebook {
+        color: map-get($social-colors,facebook);
+    }
+} @else {
+    @warn "No color found for faceboo in $social-colors map. Property ommitted."
+}
+// map-keys($map) 函数将会返回 $map 中的所有 key。这些值赋予给一个变量，那他就是一个列表。
+>> map-keys($social-colors);
+"dribble","facebook","github","google","twitter"
+@function colors($color){
+    $names: map-keys($social-colors);
+    @if not index($names,$color){
+        @warn "Waring: `#{$color} is not a valid color name.`";
+    }
+    @return map-get($social-colors,$color);
+}
+// map-values($map) 函数类似于 map-keys($map) 功能，不同的是 map-values($map )获取的是 $map 的所有 value 值，可以说也将是一个列表。而且，map-values($map) 中如果有相同的 value 也将会全部获取出来。
+>> map-values($social-colors)
+#ea4c89,#3b5998,#171515,#db4437,#55acee
+// map-merge($map1,$map2) 函数是将 $map1 和 $map2 合并，然后得到一个新的 $map。如果你要快速将新的值插入到 $map 中的话，这种方法是最佳方法。
+map-merge($map1,$map2)
+$color: (
+    text: #f36,
+    link: #f63,
+    border: #ddd,
+    backround: #fff
+);
+$typo:(
+    font-size: 12px,
+    line-height: 1.6,
+    border: #ccc,
+    background: #000
+);
+$newmap: map-merge($color,$typo);
+// map-remove($map,$key) 函数是用来删除当前 $map 中的某一个 $key，从而得到一个新的 map。其返回的值还是一个 map。他并不能直接从一个 map 中删除另一个 map，仅能通过删除 map 中的某个 key 得到新 map。
+$map:map-remove($social-colors,dribble);
+// keywords($args) 函数可以说是一个动态创建 map 的函数。可以通过混合宏或函数的参数变创建 map。参数也是成对出现，其中 $args 变成 key(会自动去掉$符号)，而 $args 对应的值就是value。
+@mixin map($args...){
+    @debug keywords($args);
+}
+
+@include map(
+  $dribble: #ea4c89,
+  $facebook: #3b5998,
+  $github: #171515,
+  $google: #db4437,
+  $twitter: #55acee
+);
+```
 #### 颜色函数
-#### Introspection 函数
-#### 三元函数
+
 #### 自定义函数
 
