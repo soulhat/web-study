@@ -159,7 +159,7 @@ nav a { display: block; padding: 6px 12px; text-decoration: none; }
 // compressed
 nav ul{margin:0;padding:0;list-style:none}nav li{display:inline-block}nav a{display:block;padding:6px 12px;text-decoration:none}
 ```
-#### Sass调试
+#### 1.5 Sass调试
 ```
 // 早期版本
 sass --watch --scss --sourcemap style.scss:style.css
@@ -167,7 +167,7 @@ sass --watch --scss --sourcemap style.scss:style.css
 sass --watch style.scss:style.css
 ```
 ![](sass debug.gif)
-## Sass与Scss的区别
+### 2 Sass与Scss的区别
 .sass只能使用Sass老语法规则（严格tab缩进规则，没看到类似 CSS 中的大括号和分号）
 
 .scss使用的是Sass的新语法规则，也就是 SCSS 语法规则（类似 CSS 语法格式，代码都包裹在一对大括号里，并且末尾结束处都有一个分号）
@@ -197,7 +197,9 @@ body {
     color: $primary-color;
 }
 ```
-#### 声明变量
+### 3 Sass教程(scss)
+#### 3.1 变量
+##### 3.1.1 声明变量
 ```
 // 声明变量的符号“$”+变量名称:赋予变量的值;
 $width: 200px;
@@ -210,7 +212,7 @@ body{
     line-height: $baseLineHeight; 
 }
 ```
-#### 变量的调用
+##### 3.1.2 变量的调用
 ```
 body {
     width: $width;
@@ -218,7 +220,7 @@ body {
     line-height: $baseLineHeight;
 }
 ```
-#### 变量的作用域
+##### 3.1.3 变量的作用域
 ```
 $color: orange !default;//定义全局变量(在选择器、函数、混合宏...的外面定义的变量为全局变量)
 .block {
@@ -234,8 +236,8 @@ span {
     color: $color;//调用全局变量
 }
 ```
-#### 嵌套
-* 选择器嵌套
+#### 3.2 嵌套
+##### 3.2.1 选择器嵌套
 ```
 nav {
     a {
@@ -247,7 +249,7 @@ nav {
     }  
 }
 ```
-* 属性嵌套
+##### 3.2.2 属性嵌套
 ```
 .box {
     border: {
@@ -256,7 +258,7 @@ nav {
     }
 }
 ```
-* 伪类嵌套
+##### 3.2.3 伪类嵌套
 ```
 .clearfix{
     &:before,
