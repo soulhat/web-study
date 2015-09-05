@@ -541,4 +541,66 @@ $type-width: 20px;
     $types: $types - 1;
 }
 ```
+#### @each
+```
+@each $var in <list>
+```
+```
+$list: adam john wynn mason kuroir;//$list 就是一个列表
+
+@mixin author-images {
+    @each $author in $list {
+        .photo-#{$author} {
+            background: url("/images/avatars/#{$author}.png") no-repeat;
+        }
+    }
+}
+
+.author-bio {
+    @include author-images;
+}
+```
+### Sass的函数
+#### 字符串函数
+##### unquote() & quote()
+```
+// unquote($string)：删除字符串中的引号
+// unquote( ) 函数只能删除字符串最前和最后的引号（双引号或单引号），而无法删除字符串中间的引号。如果字符没有带引号，返回的将是字符串本身。
+.test1 {
+    content:  unquote('Hello Sass!') ;
+}
+// quote($string)：给字符串添加引号
+.test1 {
+    content:  quote('Hello Sass!');
+}
+// 使用 quote() 函数只能给字符串增加双引号，而且字符串中间有单引号或者空格时，需要用单引号或双引号括起，否则编译的时候将会报错。解决方案就是去掉空格，或者加上引号。
+// 同时 quote() 碰到特殊符号，比如： !、?、> 等，除中折号 - 和 下划线_ 都需要使用双引号括起，否则编译器在进行编译的时候同样会报错。
+```
+##### To-upper-case() & To-lower-case()
+```
+// To-upper-case() 函数将字符串小写字母转换成大写字母
+.test {
+  text: to-upper-case(aaaaa);
+  text: to-upper-case(aA-aAAA-aaa);
+}
+// To-lower-case() 函数将字符串转换成小写字母
+.test {
+  text: to-lower-case(AAAAA);
+  text: to-lower-case(aA-aAAA-aaa);
+}
+```
+#### 数字函数
+##### percentage()
+```
+// percentage($value)：将一个不带单位的数转换成百分比值
+// 如果您转换的值是一个带有单位的值，那么在编译的时候会报错误信息
+.footer{
+    width : percentage(.2)
+}
+```
+#### 列表函数
+#### 颜色函数
+#### Introspection 函数
+#### 三元函数
+#### 自定义函数
 ```
