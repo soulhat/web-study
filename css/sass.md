@@ -825,6 +825,36 @@ $map:map-remove($social-colors,dribble);
 );
 ```
 #### 颜色函数
-
+##### RGB()
+```
+// RGB颜色只是颜色中的一种表达式，其中 R 是 red 表示红色，G 是 green 表示绿色而 B 是 blue 表示蓝色。
+rgb($red,$green,$blue)
+// rgba() 函数主要用来将一个颜色根据透明度转换成 rgba 颜色
+rgba($red,$green,$blue,$alpha)  //将一个rgba颜色转译出来，和未转译的值一样
+rgba($color,$alpha)  //将一个Hex颜色转换成rgba颜色
+// red() 函数非常简单，其主要用来获取一个颜色当中的红色值。假设有一个 #f36 的颜色，如果你想得到 #f36 中的 red 值是多少，这个时候使用 red() 函数就能很简单获取。
+>> red(#f36)
+255
+// green() 函数和 red() 函数一样，用来获取某一个颜色值中 green 的值。
+// blue() 函数是用来获取某一个颜色值中 blue 的值
+// Mix 函数是将两种颜色根据一定的比例混合在一起，生成另一种颜色。
+mix($color-1,$color-2,$weight);
+```
+##### HSL
+```
+// hsl($hue,$saturation,$lightness)：通过色相（hue）、饱和度(saturation)和亮度（lightness）的值创建一个颜色；
+// hsla($hue,$saturation,$lightness,$alpha)：通过色相（hue）、饱和度(saturation)、亮度（lightness）和透明（alpha）的值创建一个颜色；
+// hue($color)：从一个颜色中获取色相（hue）值；
+// saturation($color)：从一个颜色中获取饱和度（saturation）值；
+// lightness($color)：从一个颜色中获取亮度（lightness）值；
+// adjust-hue($color,$degrees)：通过改变一个颜色的色相值，创建一个新的颜色；
+// lighten($color,$amount)：通过改变颜色的亮度值，让颜色变亮，创建一个新的颜色；
+// darken($color,$amount)：通过改变颜色的亮度值，让颜色变暗，创建一个新的颜色；
+// saturate($color,$amount)：通过改变颜色的饱和度值，让颜色更饱和，从而创建一个新的颜色
+// desaturate($color,$amount)：通过改变颜色的饱和度值，让颜色更少的饱和，从而创建出一个新的颜色；
+// grayscale($color)：将一个颜色变成灰色，相当于desaturate($color,100%);
+// complement($color)：返回一个补充色，相当于adjust-hue($color,180deg);
+// invert($color)：反回一个反相色，红、绿、蓝色值倒过来，而透明度不变。
+```
 #### 自定义函数
 
