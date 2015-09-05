@@ -908,6 +908,21 @@ rgba(23, 34, 34, 0.65)
 >> transparentize(red,.5)
 rgba(255, 0, 0, 0.5)
 >> fade-out(hsla(98,6%,23%,.5),.1)
+rgba(58, 62, 55, 0.4)
 ```
 #### 自定义函数
+### @规则指令（directives）
+#### @import
+@import 根据文件名引入。 默认情况下，它会寻找 Sass 文件并直接引入， 但是，在少数几种情况下，它会被编译成 CSS 的 @import 规则：
 
+* 如果文件的扩展名是 .css。
+* 如果文件名以 http:// 开头。
+* 如果文件名是 url()。
+* 如果 @import 包含了任何媒体查询（media queries）。
+```
+@import "foo.css";
+@import "foo" screen;
+@import "http://foo.com/bar";
+@import url(foo);
+```
+如果上述情况都没有出现，并且扩展名是 .scss 或 .sass， 该名称的 Sass 或 SCSS 文件就会被引入。 如果没有扩展名， Sass 将试着找出具有 .scss 或 .sass 扩展名的同名文件并将其引入。
