@@ -483,3 +483,32 @@ $content: "Hello" + "" + "Sass!";
 }
 
 ```
+### Sass的控制命令
+#### @if
+```
+@mixin blockOrHidden($boolean:true) {
+  @if $boolean {
+      @debug "$boolean is #{$boolean}";
+      display: block;
+    }
+  @else {
+      @debug "$boolean is #{$boolean}";
+      display: none;
+    }
+}
+
+.block {
+  @include blockOrHidden;
+}
+
+.hidden{
+  @include blockOrHidden(false);
+}
+```
+#### @for
+```
+// $i:表示变量  start:表示起始值  end:表示结束值
+// 关键字 through 表示包括 end 这个数，而 to 则不包括 end 这个数。
+@for $i from <start> through <end>
+@for $i from <start> to <end>
+```
