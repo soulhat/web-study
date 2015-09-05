@@ -848,13 +848,66 @@ mix($color-1,$color-2,$weight);
 // saturation($color)：从一个颜色中获取饱和度（saturation）值；
 // lightness($color)：从一个颜色中获取亮度（lightness）值；
 // adjust-hue($color,$degrees)：通过改变一个颜色的色相值，创建一个新的颜色；
+$baseColor: #ad141e;
+.adjust-hue-deg {
+  background: adjust-hue($baseColor,30deg);
+}
+.adjust-hue-per {
+  background: adjust-hue($baseColor,30%);
+}
 // lighten($color,$amount)：通过改变颜色的亮度值，让颜色变亮，创建一个新的颜色；
 // darken($color,$amount)：通过改变颜色的亮度值，让颜色变暗，创建一个新的颜色；
+.lighten {
+    background: lighten($baseColor,10%);
+}
+.darken{
+    background: darken($baseColor,10%);
+}
 // saturate($color,$amount)：通过改变颜色的饱和度值，让颜色更饱和，从而创建一个新的颜色
 // desaturate($color,$amount)：通过改变颜色的饱和度值，让颜色更少的饱和，从而创建出一个新的颜色；
+$baseColor: #ad141e;
+.saturate {
+  background: saturate($baseColor,30%); //在原色饱和度基础上增加饱和度
+}
+.desaturate {
+  background: desaturate($baseColor,30%);//在原色饱和度基础上减少饱和度
+}
 // grayscale($color)：将一个颜色变成灰色，相当于desaturate($color,100%);
+$baseColor: #ad141e;
+.grayscale {
+  background: grayscale($baseColor);
+}
+.desaturate {
+  background: desaturate($baseColor,100%);
+}
 // complement($color)：返回一个补充色，相当于adjust-hue($color,180deg);
 // invert($color)：反回一个反相色，红、绿、蓝色值倒过来，而透明度不变。
+```
+##### Opacity
+```
+// alpha($color)/opacity($color)：获取颜色透明度值；
+>> alpha(red)
+1
+>> alpha(rgba(red,.8))
+0.8
+>> opacity(red)
+1
+>> opacity(rgba(red,.8))
+0.8
+// rgba($color, $alpha)：改变颜色的透明度值；
+>> rgba(red,.5)
+rgba(255, 0, 0, 0.5)
+>> rgba(#dedede,.5)
+rgba(222, 222, 222, 0.5)
+// opacify($color, $amount) / fade-in($color, $amount)：使颜色更不透明；fade-in() 函数又名 fade_in() 函数
+>> opacify(rgba(22,34,235,.6),.2)
+rgba(22, 34, 235, 0.8)
+>> fade-in(rgba(23,34,34,.5),.15)
+rgba(23, 34, 34, 0.65)
+// transparentize($color, $amount) / fade-out($color, $amount)：使颜色更加透明
+>> transparentize(red,.5)
+rgba(255, 0, 0, 0.5)
+>> fade-out(hsla(98,6%,23%,.5),.1)
 ```
 #### 自定义函数
 
