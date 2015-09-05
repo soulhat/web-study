@@ -665,9 +665,20 @@ nth($list,$n)
 >> join((blue red), join((#abc #def),(#dee #eff)))
 (#0000ff #ff0000 #aabbcc #ddeeff #ddeeee #eeffff)
 // 参数 $separator主要是用来给列表函数连接列表值是，使用的分隔符号，默认值为 auto，还有 comma 和 space 两个值
+>> join(blue,red,comma)
+(#0000ff, #ff0000)
+```
+##### append()
+```
+// append() 函数是用来将某个值插入到列表中，并且处于最末位
+>> append(10px 20px ,30px)
+(10px 20px 30px)
+// 在 append() 函数中，可以显示的设置 $separator 参数
+>> append((blue green),red,comma)
+(#0000ff, #008000, #ff0000)
 ```
 #### 颜色函数
 #### Introspection 函数
 #### 三元函数
 #### 自定义函数
-```
+
