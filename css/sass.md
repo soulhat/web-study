@@ -656,6 +656,16 @@ nth($list,$n)
 >> nth(10px 20px 30px,1)
 10px
 ```
+##### join()
+```
+// join() 函数是将两个列表连接合并成一个列表
+// join() 只能将两个列表连接成一个列表，如果直接连接两个以上的列表将会报错
+>> join(10px 20px, 30px 40px)
+(10px 20px 30px 40px)
+>> join((blue red), join((#abc #def),(#dee #eff)))
+(#0000ff #ff0000 #aabbcc #ddeeff #ddeeee #eeffff)
+// 参数 $separator主要是用来给列表函数连接列表值是，使用的分隔符号，默认值为 auto，还有 comma 和 space 两个值
+```
 #### 颜色函数
 #### Introspection 函数
 #### 三元函数
