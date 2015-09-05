@@ -512,3 +512,33 @@ $content: "Hello" + "" + "Sass!";
 @for $i from <start> through <end>
 @for $i from <start> to <end>
 ```
+```
+$grid-prefix: span !default;
+$grid-width: 60px !default;
+$grid-gutter: 20px !default;
+
+%grid {
+  float: left;
+  margin-left: $grid-gutter / 2;
+  margin-right: $grid-gutter / 2;
+}
+@for $i from 1 through 12 {
+  .#{$grid-prefix}#{$i}{
+    width: $grid-width * $i + $grid-gutter * ($i - 1);
+    @extend %grid;
+  }  
+}
+```
+#### @while
+```
+$types: 4;
+$type-width: 20px;
+
+@while $types > 0 {
+    .while-#{$types} {
+        width: $type-width + $types;
+    }
+    $types: $types - 1;
+}
+```
+```
