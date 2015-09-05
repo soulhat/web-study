@@ -272,8 +272,8 @@ nav {
     }
 }
 ```
-#### 混合宏
-1、声明混合宏
+#### 3.3 混合宏
+##### 3.3.1 声明混合宏
 ```
 // 不带参数混合宏
 @mixin border-radius{
@@ -295,7 +295,7 @@ nav {
     }
 }
 ```
-2、调用混合宏
+##### 3.3.2 调用混合宏
 ```
 @mixin border-radius{
     -webkit-border-radius: 3px;
@@ -305,7 +305,7 @@ button {
     @include border-radius;
 }
 ```
-3、混合宏参数
+##### 3.3.3 混合宏参数
 ```
 // 传一个不带值的参数
 @mixin border-radius($radius){
@@ -351,7 +351,7 @@ button {
     @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));
 }
 ```
-#### 继承与扩展
+#### 3.4 继承与扩展
 
 ```
 .btn {
@@ -372,7 +372,7 @@ button {
     @extend .btn;
 }
 ```
-#### 占位符 %placeholder
+#### 3.5 占位符 %placeholder
 ```
 %mt5 {
     margin-top: 5px;
@@ -396,7 +396,7 @@ button {
 ```
 #### 混合宏 VS 继承 VS 占位符
 ![](sass include extend.png)
-#### 插值#{}
+#### 3.6 插值#{}
 ```
 $properties: (margin, padding);
 @mixin set-value($side, $value) {
@@ -430,12 +430,12 @@ $flag: "status";
     @extend .selected-#{$flag};
 }
 ```
-#### 注释
+#### 3.7 注释
 * 类似 CSS 的注释方式，使用"/* ”开头，结属使用 ”*/"
 * 类似 JavaScript 的注释方式，使用"//"
 
 两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示
-#### 数据类型
+#### 3.8 数据类型
 * 数字：如，1、2、13、10px；
 * 字符串：有引号字符串或无引号字符串，如，"foo"、'bar'、baz；
 * 颜色：如，blue、#04a3f9、rgba(255,0,0,0.5)；
@@ -447,7 +447,7 @@ $flag: "status";
   * append函数（append function） 可以在值列表中添加值； 
   * @each规则（@each rule） 则能够给值列表中的每个项目添加样式。
 
-#### 运算
+#### 3.9 运算
 ```
 // 加法
 .box {
@@ -483,8 +483,8 @@ $content: "Hello" + "" + "Sass!";
 }
 
 ```
-### Sass的控制命令
-#### @if
+#### 3.10 Sass的控制命令
+##### 3.10.1 @if
 ```
 @mixin blockOrHidden($boolean:true) {
   @if $boolean {
@@ -505,7 +505,7 @@ $content: "Hello" + "" + "Sass!";
   @include blockOrHidden(false);
 }
 ```
-#### @for
+##### 3.10.2 @for
 ```
 // $i:表示变量  start:表示起始值  end:表示结束值
 // 关键字 through 表示包括 end 这个数，而 to 则不包括 end 这个数。
@@ -529,7 +529,7 @@ $grid-gutter: 20px !default;
   }  
 }
 ```
-#### @while
+##### 3.10.3 @while
 ```
 $types: 4;
 $type-width: 20px;
@@ -541,7 +541,7 @@ $type-width: 20px;
     $types: $types - 1;
 }
 ```
-#### @each
+##### 3.10.4 @each
 ```
 @each $var in <list>
 ```
@@ -560,9 +560,9 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
     @include author-images;
 }
 ```
-### Sass的函数
-#### 字符串函数
-##### unquote() & quote()
+#### 3.11 Sass的函数
+##### 3.11.1 字符串函数
+###### unquote() & quote()
 ```
 // unquote($string)：删除字符串中的引号
 // unquote( ) 函数只能删除字符串最前和最后的引号（双引号或单引号），而无法删除字符串中间的引号。如果字符没有带引号，返回的将是字符串本身。
@@ -576,7 +576,7 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
 // 使用 quote() 函数只能给字符串增加双引号，而且字符串中间有单引号或者空格时，需要用单引号或双引号括起，否则编译的时候将会报错。解决方案就是去掉空格，或者加上引号。
 // 同时 quote() 碰到特殊符号，比如： !、?、> 等，除中折号 - 和 下划线_ 都需要使用双引号括起，否则编译器在进行编译的时候同样会报错。
 ```
-##### To-upper-case() & To-lower-case()
+###### To-upper-case() & To-lower-case()
 ```
 // To-upper-case() 函数将字符串小写字母转换成大写字母
 .test {
@@ -589,8 +589,8 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
   text: to-lower-case(aA-aAAA-aaa);
 }
 ```
-#### 数字函数
-##### percentage()
+##### 3.11.2 数字函数
+###### percentage()
 ```
 // percentage($value)：将一个不带单位的数转换成百分比值
 // 如果您转换的值是一个带有单位的值，那么在编译的时候会报错误信息
@@ -598,35 +598,35 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
     width : percentage(.2)
 }
 ```
-##### round()
+###### round()
 ```
 // round() 函数可以将一个数四舍五入为一个最接近的整数
 .footer {
    width:round(12.3px)
 }
 ```
-##### ceil()
+###### ceil()
 ```
 // ceil() 函数将一个数转换成最接近于自己的整数，会将一个大于自身的任何小数转换成大于本身 1 的整数。也就是只做入，不做舍的计算。
 .footer {
    width:ceil(12.3px);
 }
 ```
-##### floor()
+###### floor()
 ```
 // floor() 函数刚好与 ceil() 函数功能相反，其主要将一个数去除其小数部分，并且不做任何的进位。也就是只做舍，不做入的计算。
 .footer {
    width:floor(12.3px);
 }
 ```
-##### abs()
+###### abs()
 ```
 // abs( ) 函数会返回一个数的绝对值。
 .footer {
    width:abs(-12.3px);
 }
 ```
-##### min() & max()
+###### min() & max()
 ```
 // min() 函数功能主要是在多个数之中找到最小的一个，这个函数可以设置任意多个参数
 // 在 min() 函数中同时出现两种不同类型的单位，将会报错误信息
@@ -636,27 +636,27 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
 >> max(1px,5px)
 5px
 ```
-##### random()
+###### random()
 ```
 // random() 函数是用来获取一个随机数
 >> random()
 ```
-#### 列表函数
-##### length()
+##### 3.11.3  列表函数
+###### length()
 ```
 // ength() 函数主要用来返回一个列表中有几个值，简单点说就是返回列表清单中有多少个值
 // length() 函数中的列表参数之间使用空格隔开，不能使用逗号，否则函数将会出错
 >> length(10px 20px (border 1px solid) 2em)
 4
 ```
-##### nth()
+###### nth()
 ```
 nth($list,$n)
 // nth() 函数用来指定列表中某个位置的值。不过在 Sass 中，nth() 函数和其他语言不同，1 是指列表中的第一个标签值，2 是指列给中的第二个标签值，依此类推。
 >> nth(10px 20px 30px,1)
 10px
 ```
-##### join()
+###### join()
 ```
 // join() 函数是将两个列表连接合并成一个列表
 // join() 只能将两个列表连接成一个列表，如果直接连接两个以上的列表将会报错
@@ -668,7 +668,7 @@ nth($list,$n)
 >> join(blue,red,comma)
 (#0000ff, #ff0000)
 ```
-##### append()
+###### append()
 ```
 // append() 函数是用来将某个值插入到列表中，并且处于最末位
 >> append(10px 20px ,30px)
@@ -677,14 +677,14 @@ nth($list,$n)
 >> append((blue green),red,comma)
 (#0000ff, #008000, #ff0000)
 ```
-##### zip()
+###### zip()
 ```
 // zip()函数将多个列表值转成一个多维的列表
 // 在使用zip()函数时，每个单一的列表个数值必须是相同的
 >> zip(1px 2px 3px,solid dashed dotted,green blue red)
 ((1px "solid" #008000), (2px "dashed" #0000ff), (3px "dotted" #ff0000))
 ```
-##### index()
+###### index()
 ```
 // ndex() 函数类似于索引一样，主要让你找到某个值在列表中所处的位置。在 Sass 中，第一个值就是1，第二个值就是 2，依此类推
 >> index(1px solid red,dotted) //列表中没有找到 dotted
@@ -692,7 +692,7 @@ false
 >> index(1px solid red,solid) //列表中找到 solid 值，并且返回他的位置值 2
 2
 ```
-##### Introspection
+###### Introspection
 ```
 // type-of() 函数主要用来判断一个值是属于什么类型
 >> type-of(100)
@@ -737,7 +737,7 @@ false
 >> comparable(2px,1em)
 false
 ```
-##### Miscellaneous
+###### Miscellaneous
 ```
 // 在这里把 Miscellaneous 函数称为三元条件函数，主要因为他和 JavaScript 中的三元判断非常的相似。他有两个值，当条件成立返回一种值，当条件不成立时返回另一种值
 if($condition,$if-true,$if-false)
@@ -746,7 +746,7 @@ if($condition,$if-true,$if-false)
 >> if(false,1px,2px)
 2px
 ```
-##### Map
+###### Map
 ```
 // Sass 的 map 常常被称为数据地图，也有人称其为数组，因为他总是以 key:value 成对的出现，但其更像是一个 JSON 数据。
 $map: (
@@ -824,8 +824,8 @@ $map:map-remove($social-colors,dribble);
   $twitter: #55acee
 );
 ```
-#### 颜色函数
-##### RGB()
+##### 3.11.4 颜色函数
+###### RGB()
 ```
 // RGB颜色只是颜色中的一种表达式，其中 R 是 red 表示红色，G 是 green 表示绿色而 B 是 blue 表示蓝色。
 rgb($red,$green,$blue)
@@ -840,7 +840,7 @@ rgba($color,$alpha)  //将一个Hex颜色转换成rgba颜色
 // Mix 函数是将两种颜色根据一定的比例混合在一起，生成另一种颜色。
 mix($color-1,$color-2,$weight);
 ```
-##### HSL
+###### HSL
 ```
 // hsl($hue,$saturation,$lightness)：通过色相（hue）、饱和度(saturation)和亮度（lightness）的值创建一个颜色；
 // hsla($hue,$saturation,$lightness,$alpha)：通过色相（hue）、饱和度(saturation)、亮度（lightness）和透明（alpha）的值创建一个颜色；
@@ -883,7 +883,7 @@ $baseColor: #ad141e;
 // complement($color)：返回一个补充色，相当于adjust-hue($color,180deg);
 // invert($color)：反回一个反相色，红、绿、蓝色值倒过来，而透明度不变。
 ```
-##### Opacity
+###### Opacity
 ```
 // alpha($color)/opacity($color)：获取颜色透明度值；
 >> alpha(red)
@@ -910,9 +910,9 @@ rgba(255, 0, 0, 0.5)
 >> fade-out(hsla(98,6%,23%,.5),.1)
 rgba(58, 62, 55, 0.4)
 ```
-#### 自定义函数
-### @规则指令（directives）
-#### @import
+##### 3.11.5 自定义函数
+#### 3.12 @规则指令（directives）
+##### 3.12.1 @import
 @import 根据文件名引入。 默认情况下，它会寻找 Sass 文件并直接引入， 但是，在少数几种情况下，它会被编译成 CSS 的 @import 规则：
 
 * 如果文件的扩展名是 .css。
@@ -936,7 +936,7 @@ rgba(58, 62, 55, 0.4)
   @import "example";
 }
 ```
-#### @media
+##### 3.12.2 @media
 Sass 中的 @media 指令和 CSS 的使用规则一样的简单，但它有另外一个功能，可以嵌套在 CSS 规则中。有点类似 JS 的冒泡功能一样，如果在样式中使用 @media 指令，它将冒泡到外面。
 ```
 .sidebar {
@@ -968,7 +968,7 @@ $value: 1.5;
   }
 }
 ```
-#### @extend
+##### 3.12.3 @extend
 Sass 中的 @extend 是用来扩展选择器或占位符
 ```
 .error {
@@ -1006,7 +1006,7 @@ Sass 中的 @extend 是用来扩展选择器或占位符
   @extend %extreme;
 }
 ```
-#### @at-root
+##### 3.12.4 @at-root
 @at-root 从字面上解释就是跳出根元素。当你选择器嵌套多层之后，想让某个选择器跳出，此时就可以使用 @at-root。
 ```
 .a {
@@ -1025,12 +1025,12 @@ Sass 中的 @extend 是用来扩展选择器或占位符
   }  
 }
 ```
-#### @debug
+##### 3.12.5 @debug
 @debug 在 Sass 中是用来调试的，当你的在 Sass 的源码中使用了 @debug 指令之后，Sass 代码在编译出错时，在命令终端会输出你设置的提示 Bug
 ```
 @debug 10em + 12em;
 ```
-#### @warn
+##### 3.12.6 @warn
 @warn 和 @debug 功能类似，用来帮助我们更好的调试 Sass。
 ```
 @mixin adjust-location($x, $y) {
@@ -1045,7 +1045,7 @@ Sass 中的 @extend 是用来扩展选择器或占位符
   position: relative; left: $x; top: $y;
 }
 ```
-#### @error
+##### 3.12.7 @error
 @error 和 @warn、@debug 功能是如出一辙。
 ```
 @mixin error($x){
