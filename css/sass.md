@@ -1,5 +1,6 @@
 # Sass
-#### Mac安装
+### 1 Sass安装
+#### 1.1 Mac安装
 ```
 // 前提安装了ruby，检测
 ruby －v
@@ -10,16 +11,16 @@ sudo gem install path/sass-3.14.18.gem
 // 检查安装版本
 sass -v
 ```
-#### 更新
+#### 1.2 更新
 ```
 gem update sass
 ```
-#### 卸载
+#### 1.3 卸载
 ```
 gem uninstall sass
 ```
-#### 编译
-##### 编译方式
+#### 1.4 编译
+##### 1.4.1 编译方式
 * 命令编译
 
 ```
@@ -41,8 +42,8 @@ sass --watch test.scss:test.css
   * grunt
   * gulp
 
-###### 例子
 ```
+// 例子
 // grunt
 module.exports = function(grunt) {
     grunt.initConfig({
@@ -65,10 +66,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default',['watch']);
 }
-```
 
-
-```
 // gulp
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -85,26 +83,30 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass','watch']);
 ```
-##### 编译输出方式
+##### 1.4.2 编译输出方式
 * 嵌套输出方式 nested
+
 ```
 sass --watch test.scss:test.css --style nested
 ```
 * 展开输出方式 expanded
+
 ```
 sass --watch test.scss:test.css --style expanded
 ```
 * 紧凑输出方式 compact
+
 ```
 sass --watch test.scss:test.css --style compact
 ```
 * 压缩输出方式 compressed
+
 ```
 sass --watch test.scss:test.css --style compressed
 ```
 
-###### 例子
 ```
+// 例子
 // sass
 nav {
     ul {
@@ -121,8 +123,7 @@ nav {
         text-decoration: none;
     }
 }
-```
-```
+
 // nested
 nav ul {
     margin: 0;
@@ -134,8 +135,7 @@ nav a {
     display: block;
     padding: 6px 12px;
     text-decoration: none; }
-```
-```
+
 // expanded
 nav ul {
     margin: 0;
@@ -150,14 +150,12 @@ nav a {
     padding: 6px 12px;
     text-decoration: none;
 }
-```
-```
+
 // compact
 nav ul { margin: 0; padding: 0; list-style: none; }
 nav li { display: inline-block; }
 nav a { display: block; padding: 6px 12px; text-decoration: none; }
-```
-```
+
 // compressed
 nav ul{margin:0;padding:0;list-style:none}nav li{display:inline-block}nav a{display:block;padding:6px 12px;text-decoration:none}
 ```
@@ -966,5 +964,100 @@ $value: 1.5;
   .sidebar {
     width: 500px;
   }
+}
+```
+#### @extend
+Sass 中的 @extend 是用来扩展选择器或占位符
+```
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error.intrusion {
+  background-image: url("/image/hacked.png");
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}
+// 所设某个样式要继承多个地方的样式，那么可以使用 @extend 来继承多个选择器或占位符的样式
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.attention {
+  font-size: 3em;
+  background-color: #ff0;
+}
+.seriousError {
+  @extend .error;
+  @extend .attention;
+  border-width: 3px;
+}
+// 扩展单一选择器，这段代码在不调用之前不产生任何代码，只有能过@extend调用之后才生成代码
+#context a%extreme {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+.notice {
+  @extend %extreme;
+}
+```
+#### @at-root
+@at-root 从字面上解释就是跳出根元素。当你选择器嵌套多层之后，想让某个选择器跳出，此时就可以使用 @at-root。
+```
+.a {
+  color: red;
+
+  .b {
+    color: orange;
+
+    .c {
+      color: yellow;
+
+      @at-root .d {
+        color: green;
+      }
+    }
+  }  
+}
+```
+#### @debug
+@debug 在 Sass 中是用来调试的，当你的在 Sass 的源码中使用了 @debug 指令之后，Sass 代码在编译出错时，在命令终端会输出你设置的提示 Bug
+```
+@debug 10em + 12em;
+```
+#### @warn
+@warn 和 @debug 功能类似，用来帮助我们更好的调试 Sass。
+```
+@mixin adjust-location($x, $y) {
+  @if unitless($x) {
+    @warn "Assuming #{$x} to be in pixels";
+    $x: 1px * $x;
+  }
+  @if unitless($y) {
+    @warn "Assuming #{$y} to be in pixels";
+    $y: 1px * $y;
+  }
+  position: relative; left: $x; top: $y;
+}
+```
+#### @error
+@error 和 @warn、@debug 功能是如出一辙。
+```
+@mixin error($x){
+  @if $x < 10 {
+    width: $x * 10px;
+  } @else if $x == 10 {
+    width: $x;
+  } @else {
+    @error "你需要将#{$x}值设置在10以内的数";
+  }
+
+}
+
+.test {
+  @include error(15);
 }
 ```
