@@ -7,5 +7,5 @@
    * [css.md](css/css.md)
    * [sass.md](css/sass.md)
 * [ionic](app/ionic.md)
-* [web standard guide](html/web_standard_guide.md)
+* [guide](guide/web_standard_guide.md)
 
