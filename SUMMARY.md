@@ -12,5 +12,5 @@
    * [develop guide](guide/develop_guide.md)
 * [Javascript](javascript/javascript_summary.md)
    * [javascript](javascript/javascript.md)
-   * jquery
+   * [jquery](javascript/jquery.md)
 
