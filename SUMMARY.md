@@ -8,5 +8,5 @@
    * [sass.md](css/sass.md)
 * [App](app/app_summary.md)
    * [ionic](app/ionic.md)
-* [guide](guide/web_standard_guide.md)
+* [guide](guide/guide_summary.md)
 
