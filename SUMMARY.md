@@ -11,4 +11,5 @@
 * [guide](guide/guide_summary.md)
    * [develop guide](guide/develop_guide.md)
 * [Javascript](javascript/javascript_summary.md)
+   * javascript
 
