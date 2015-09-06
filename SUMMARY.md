@@ -9,4 +9,5 @@
 * [App](app/app_summary.md)
    * [ionic](app/ionic.md)
 * [guide](guide/guide_summary.md)
+   * develop guide
 
