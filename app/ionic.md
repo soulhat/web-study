@@ -1,1 +1,0 @@
-# Ionic + Angular + Cordova
