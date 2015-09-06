@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "gitbook-plugin-betterchinese"
+        "gitbook-plugin-betterchinese",
+        "gitbook-plugin-todo"
     ],
     "pluginsConfig": {}
 }
