@@ -8,7 +8,7 @@
    * [sass.md](css/sass.md)
 * [App](app/app_summary.md)
    * [ionic](app/ionic.md)
-* [guide](guide/guide_summary.md)
+* [Guide](guide/guide_summary.md)
    * [develop guide](guide/develop_guide.md)
 * [Javascript](javascript/javascript_summary.md)
    * [javascript](javascript/javascript.md)
