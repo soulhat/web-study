@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [html](html/htmlguide.md)
+* [Html](html/htmlguide.md)
 * [Css](css/css-guide.md)
    * [css.md](css/css.md)
    * [sass.md](css/sass.md)
