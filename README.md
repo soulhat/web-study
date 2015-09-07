@@ -8,3 +8,5 @@
 ### 参考站点
 #### 英文站点
 * [Hacker News](https://news.ycombinator.com/news)
+* 英文博客
+  * [David Walsh](http://davidwalsh.name)
