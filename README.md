@@ -7,14 +7,14 @@
 ### 整理初衷
 本人是非计算机专业，因此在平日不断学习中，经常遇到各种不懂的知识点，每每通过搜索或问答求助，但过段时间便又得重复一遍，记忆实在靠不住，未来腾出让记忆更多有价值的内容，特此做一些自己在学习web开发中的一些经验和实战中用到的知识点的硬件存储，方便后续查看，当然举手之劳能帮助一些初学者，也算是庆幸之举。
 ### 涉及技术
-- [ ] Html&Html5
-- [ ] Css&Css3
+* Html&Html5
+* Css&Css3
   - [x] Sass(Scss)
-- [ ] Javascript
-- [ ] App
+* Javascript
+* App
   - [ ] [ionic](http://www.ionicframework.com)
-- [ ] Node.js
-- [ ] Python
+* Node.js
+* Python
   - [ ] [ipython](http://ipython.org)
   - [ ] [jupyter](http://jupyter.org)
 
