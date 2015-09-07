@@ -4,7 +4,8 @@
         "duoshuo",
         "edit-link",
         "github",
-        "mermaid"
+        "mermaid",
+        "mathjax"
     ],
     "pluginsConfig": {
         "duoshuo": {
