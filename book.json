@@ -1,14 +1,18 @@
 {
     "plugins": [
         "todo",
-        "duoshuo"
-       
+        "duoshuo",
+        "edit-link"
     ],
     "pluginsConfig": {
         "duoshuo": {
             "short_name": "webdevelop",
             "theme": "default"
         },
+        "edit-link": {
+            "base": "https://github.com/glabcn/web-study/edit/master/path/to/book",
+            "label": "Edit This Page"
+        }
         
     }
 }
