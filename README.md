@@ -27,3 +27,5 @@
   * [阮一峰](http://www.ruanyifeng.com/blog)
 
 #### 开源书籍
+* [JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com)
+* [ECMAScript 6入门](http://es6.ruanyifeng.com)
