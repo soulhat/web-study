@@ -9,6 +9,7 @@
 ### 涉及技术
 * Html&Html5
 * Css&Css3
+- [x] Sass(Scss)
 * Javascript
 * App
   * [ionic](http://www.ionicframework.com)
