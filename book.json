@@ -1,6 +1,12 @@
 {
     "plugins": [
-        "todo"
+        "todo",
+        "duoshuo"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "duoshuo": {
+            "short_name": "web develop guide",
+            "theme": "default"
+        }
+    }
 }
