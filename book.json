@@ -2,7 +2,7 @@
     "plugins": [
         "todo",
         "duoshuo",
-        "baidu"
+       
     ],
     "pluginsConfig": {
         "duoshuo": {
