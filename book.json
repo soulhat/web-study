@@ -10,8 +10,8 @@
             "theme": "default"
         },
         "edit-link": {
-            "base": "https://github.com/glabcn/web-study/edit/master/path/to/book",
-            "label": "Edit This Page"
+            "base": "https://github.com/glabcn/web-study/edit/master",
+            "label": "编辑"
         }
         
     }
