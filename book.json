@@ -3,8 +3,7 @@
         "todo",
         "duoshuo",
         "edit-link",
-        "github",
-        "anchor-navigation"
+        "github"
     ],
     "pluginsConfig": {
         "duoshuo": {
