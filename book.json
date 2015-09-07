@@ -15,7 +15,7 @@
         },
         "edit-link": {
             "base": "https://github.com/glabcn/web-study/edit/master/",
-            "label": ""
+            "label": "edit"
         },
         "github": {
             "url": "https://github.com/glabcn/web-study"
