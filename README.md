@@ -12,8 +12,8 @@
 * App
 * Node.js
 * Python
-* [ipython](http://ipython.org)
-* [jupyter](http://jupyter.org)
+  * [ipython](http://ipython.org)
+  * [jupyter](http://jupyter.org)
 ### 参考站点
 #### 英文站点
 * [Hacker News](https://news.ycombinator.com/news)
