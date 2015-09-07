@@ -2,9 +2,7 @@
     "plugins": [
         "todo",
         "duoshuo",
-        "edit-link",
-        "mermaid-2",
-        "mathjax"
+        "edit-link"
     ],
     "pluginsConfig": {
         "duoshuo": {
@@ -14,9 +12,6 @@
         "edit-link": {
             "base": "https://github.com/glabcn/web-study/edit/master/",
             "label": "编辑"
-        },
-        "mermaid-2": {
-            "theme": "forest" // here to change the mermaid theme
         }
     }
 }
