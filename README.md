@@ -10,3 +10,7 @@
 * [Hacker News](https://news.ycombinator.com/news)
 * 英文博客
   * [David Walsh](http://davidwalsh.name)
+#### 中文站点
+* 中文博客
+  * [阮一峰](http://www.ruanyifeng.com/blog)
+#### 开源书籍
