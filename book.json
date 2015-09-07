@@ -5,8 +5,7 @@
         "edit-link",
         "github",
         "mermaid",
-        "mathjax",
-        "maxiang"
+        "mathjax"
     ],
     "pluginsConfig": {
         "duoshuo": {
