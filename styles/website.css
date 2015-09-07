@@ -5,4 +5,5 @@ div#comment-box {
 iv#js_right_nav.right-nav {
     top: 79px;
     right: 130px;
+    width: 200px;
 }
