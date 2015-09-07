@@ -10,7 +10,7 @@
             "theme": "default"
         },
         "edit-link": {
-            "base": "https://github.com/glabcn/web-study/edit/master",
+            "base": "https://github.com/glabcn/web-study",
             "label": "编辑"
         }
         
