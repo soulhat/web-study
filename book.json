@@ -3,7 +3,8 @@
         "todo",
         "duoshuo",
         "edit-link",
-        "mermaid-2"
+        "mermaid-2",
+        "mathjax"
     ],
     "pluginsConfig": {
         "duoshuo": {
