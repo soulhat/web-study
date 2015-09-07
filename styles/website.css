@@ -1,1 +1,4 @@
 /* CSS for website */
+div#comment-box {
+    padding: 20px;
+}
