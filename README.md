@@ -5,12 +5,23 @@
 
 ### 整理初衷
 本人是非计算机专业，因此在平日不断学习中，经常遇到各种不懂的知识点，每每通过搜索或问答求助，但过段时间便又得重复一遍，记忆实在靠不住，未来腾出让记忆更多有价值的内容，特此做一些自己在学习web开发中的一些经验和实战中用到的知识点的硬件存储，方便后续查看，当然举手之劳能帮助一些初学者，也算是庆幸之举。
+### 涉及技术
+* Html&Html5
+* Css&Css3
+* Javascript
+* App
+* Node.js
+* Python
+* [ipython](http://ipython.org)
+* [jupyter](http://jupyter.org)
 ### 参考站点
 #### 英文站点
 * [Hacker News](https://news.ycombinator.com/news)
 * 英文博客
   * [David Walsh](http://davidwalsh.name)
+
 #### 中文站点
 * 中文博客
   * [阮一峰](http://www.ruanyifeng.com/blog)
+
 #### 开源书籍
