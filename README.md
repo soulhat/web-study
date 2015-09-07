@@ -10,6 +10,7 @@
 * Css&Css3
 * Javascript
 * App
+  * [ionic](http://www.ionicframework.com)
 * Node.js
 * Python
   * [ipython](http://ipython.org)
