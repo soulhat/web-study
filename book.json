@@ -6,8 +6,7 @@
         "github",
         "mermaid",
         "mathjax",
-        "swiftype",
-        "maxiang"
+        "swiftype"
     ],
     "pluginsConfig": {
         "duoshuo": {
