@@ -7,6 +7,10 @@ iv#js_right_nav.right-nav {
     right: 130px;
     width: 200px;
 }
+a.btn.pull-right.twitter-sharing-link.sharing-link, a.btn.pull-right.facebook-sharing-link.sharing-link, a.btn.pull-right.google-plus-sharing-link.sharing-link {
+    display: none;
+}
+
 section {
     width: 100%;
 }
