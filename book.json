@@ -2,7 +2,8 @@
     "plugins": [
         "todo",
         "duoshuo",
-        "edit-link"
+        "edit-link",
+        "github"
     ],
     "pluginsConfig": {
         "duoshuo": {
@@ -12,6 +13,9 @@
         "edit-link": {
             "base": "https://github.com/glabcn/web-study/edit/master/",
             "label": "编辑"
+        },
+        "github": {
+            "url": "https://github.com/glabcn/web-study"
         }
     }
 }
