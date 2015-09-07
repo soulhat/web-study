@@ -4,19 +4,7 @@
         "duoshuo",
         "edit-link",
         "mermaid-2",
-        "mathjax",
+        "mathjax"
     ],
-    "pluginsConfig": {
-        "duoshuo": {
-            "short_name": "webdevelop",
-            "theme": "default"
-        },
-        "edit-link": {
-            "base": "https://github.com/glabcn/web-study/edit/master/",
-            "label": "编辑"
-        },
-        "mermaid-2": {
-            "theme": "forest" // here to change the mermaid theme
-        }
-    }
+    "pluginsConfig": {}
 }
