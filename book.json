@@ -1,12 +1,16 @@
 {
     "plugins": [
         "todo",
-        "duoshuo"
+        "duoshuo",
+        "baiduana"
     ],
     "pluginsConfig": {
         "duoshuo": {
             "short_name": "webdevelop",
             "theme": "default"
+        },
+        "baidu": {
+            "token": "your baidu analytics token"
         }
     }
 }
