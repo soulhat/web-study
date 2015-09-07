@@ -2,7 +2,6 @@
     "plugins": [
         "todo",
         "duoshuo",
-        "edit-link",
         "github",
         "mermaid",
         "mathjax",
@@ -12,10 +11,6 @@
         "duoshuo": {
             "short_name": "webdevelop",
             "theme": "default"
-        },
-        "edit-link": {
-            "base": "https://github.com/glabcn/web-study/edit/master/",
-            "label": "Edit"
         },
         "github": {
             "url": "https://github.com/glabcn/web-study"
