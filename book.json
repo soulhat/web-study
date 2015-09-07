@@ -5,7 +5,8 @@
         "edit-link",
         "github",
         "mermaid",
-        "mathjax"
+        "mathjax",
+        "swiftype"
     ],
     "pluginsConfig": {
         "duoshuo": {
@@ -18,6 +19,10 @@
         },
         "github": {
             "url": "https://github.com/glabcn/web-study"
+        },
+        "swiftype": {
+            "token": "utQHy1R2XyiVqDqaZxxx",
+            "version": "2.0.0"
         }
     }
 }
