@@ -9,8 +9,6 @@
             "short_name": "webdevelop",
             "theme": "default"
         },
-        "baidu": {
-            "token": "67e2a5119525c81f68bbf5f74ecadc78"
-        }
+        
     }
 }
