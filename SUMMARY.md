@@ -5,7 +5,7 @@
    * [html](html/html.md)
 * [Css](css/css_summary.md)
    * [css](css/css.md)
-   * [sass.md](css/sass.md)
+   * [sass](css/sass.md)
 * [App](app/app_summary.md)
    * [ionic](app/ionic.md)
    * [Meteor](app/meteor.md)
