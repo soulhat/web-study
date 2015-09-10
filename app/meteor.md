@@ -53,7 +53,62 @@ meteor deploy myapp.meteor.com
 [文档链接](部署在 Modulus)
 #### Meteor Up
 Meteor Up （简称 mup ）是另一个通过命令行的操作去帮助你解决安装和部署问题。所以让我们看看如何通过 Meteor Up 来部署 Microscope。
+##### Meteor Up 的初始化
+```
+npm install -g mup 
+// npm安装Meteor Up
+```
+创建一个单独的目录，为Meteor Up 提供一个特定的部署环境。我们使用单独的目录出于两个原因：
+1. 这可以很好的避免里面包含任何你Git 存储库的隐藏文件，尤其如果你是在公共代码库去操作。
+2. 通过使用多个单独的目录，能够并行地进行多个Meteor Up 管理和配置。这将会用在实际产品的部署以及分段实例的部署。
 
+```
+mkdir ~/microscope-deploy
+cd ~/microscope-deploy
+mup init
+```
+##### Meteor Up 的配置
+当初始化一个新项目的时候，Meteor Up 会为了创建两个文件：mup.json和 settings.json。
+
+mup.json会保存所有我们部署的相关设置，而settings.json 会保存所有应用的相关设置（OAuth token、Analytics token，等等）。
+
+配置 mup.json 文件
+```
+{
+  // 服务器身份验证
+  "servers": [{
+    "host": "hostname",
+    "username": "root",
+    "password": "password"
+    //or pem file (ssh based authentication)
+    //"pem": "~/.ssh/id_rsa"
+  }],
+
+  // MongoDB 配置
+  "setupMongo": true,
+
+  // Meteor 应用路径
+  "app": "/path/to/the/app",
+
+  // 环境变量
+  "env": {
+    "ROOT_URL": "http://supersite.com"
+    // MAIL_URL
+    // MONGO_URL
+  }
+}
+```
+##### 设置和部署
+```
+mup setup
+// 设置服务器为 Meteor 应用托管
+mup deploy
+// 部署应用
+```
+##### 显示日志信息
+```
+mup logs -f
+```
 ### Meteor 应用的文件结构
 为了保持项目简洁，删除当前文件下的microscope.html、microscope.js 和 microscope.css。新建/client，/server，/public 和 /lib四个文件夹。结构如下：
 ```
