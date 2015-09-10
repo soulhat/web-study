@@ -64,6 +64,7 @@ microscope
 #### css
 CSS 文件将被 Meteor 自动加载并简化。因此，不同于其它的静态文件都被放置于 /public 文件夹，请将 CSS 文件放入 /client 文件夹。请创建一个 client/stylesheets/ 文件夹并将以下 style.css 文件放置入内。
 ```
+// style.css
 .grid-block, .main, .post, .comments li, .comment-form {
     background: #fff;
     border-radius: 3px;
