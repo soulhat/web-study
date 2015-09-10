@@ -51,7 +51,7 @@ meteor deploy myapp.meteor.com
 如果顺利地部署成功了，几秒钟后你就能够在 http://myapp.meteor.com 上访问到你的应用了。
 #### 部署在 Modulus
 [文档链接](部署在 Modulus)
-#### Meteor Up
+#### Meteor Up[github](https://github.com/arunoda/meteor-up)
 Meteor Up （简称 mup ）是另一个通过命令行的操作去帮助你解决安装和部署问题。所以让我们看看如何通过 Meteor Up 来部署 Microscope。
 ##### Meteor Up 的初始化
 ```
