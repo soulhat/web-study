@@ -11,7 +11,7 @@ $ meteor
 ```
 访问 http://localhost:3000
 看到如下网页
-![](2-1.png)
+![](http://7xlot8.com1.z0.glb.clouddn.com/2-1.png)
 microscope目录结构如下：
 ```
 microscope
