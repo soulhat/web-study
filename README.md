@@ -23,8 +23,9 @@
   - [ ] [jupyter](http://jupyter.org)
 
 ### 常用开源库
-* [Underscore](http://underscorejs.org)
+* [Underscorejs](http://underscorejs.org)
 * [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择库
+* [momentjs](http://momentjs.com)
 
 ### 云服务商
 * [modulus](https://modulus.io)
