@@ -13,7 +13,10 @@
 * Javascript
 * App
   - [ ] [ionic](http://www.ionicframework.com)
+  - [ ] [Meteor](http://www.meteor.com)
+  - [ ] [Cordova](http://cordova.apache.org)
 * Node.js
+
 * Python
   - [ ] [ipython](http://ipython.org)
   - [ ] [jupyter](http://jupyter.org)
