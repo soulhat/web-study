@@ -22,6 +22,8 @@
   - [ ] [ipython](http://ipython.org)
   - [ ] [jupyter](http://jupyter.org)
 
+* Test
+  - [ ] [jasmine](https://github.com/jasmine/jasmine)
 ### 常用开源库
 * [Underscorejs](http://underscorejs.org)
 * [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择库
