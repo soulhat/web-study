@@ -38,3 +38,16 @@ Meteor 中的代码包有点特殊，分为五种：
 * 本地代码包（local package）是自己开发的代码包，保存在 /packages 文件夹中。
 * NPM 代码包（NPM package）是Node.js的代码包，虽不能直接用于 Meteor，但可以在上述几种代码包中使用。
 
+### Meteor 应用的文件结构
+为了保持项目简洁，删除当前文件下的microscope.html、microscope.js 和 microscope.css。新建/client，/server，/public 和 /lib四个文件夹。结构如下：
+```
+microscope
+    -client 
+    // 只会在客户端运行
+    -server 
+    // 只会在服务器端运行
+    -public 
+    // 将所有的静态文件（字体，图片等）放置在public文件夹中
+    -lib
+// 其它代码则将同时运行于服务器端和客户端上
+```
