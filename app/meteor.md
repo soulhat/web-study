@@ -38,6 +38,19 @@ Meteor 中的代码包有点特殊，分为五种：
 * 本地代码包（local package）是自己开发的代码包，保存在 /packages 文件夹中。
 * NPM 代码包（NPM package）是Node.js的代码包，虽不能直接用于 Meteor，但可以在上述几种代码包中使用。
 
+### 部署
+#### 部署在 Meteor
+首先最简单的是部署到 Meteor 的子域名上（例如： http://myapp.meteor.com ），这是我们首先要去学习的。在项目早期，这对于展示你的应用和快速设置一个测试服务器都很有用途。
+
+而部署在 Meteor 是非常简单的。打开终端，定位到你 Meteor 应用的目录，并输入：
+```
+meteor deploy myapp.meteor.com
+```
+要把“myapp”替换成你想要的名称，最好是命名一个没有被使用的。如果你的名称已经被使用，Meteor 会提示你去输入密码。如果发生这样的情况，只需通过 ctrl+c 来取消当前操作，然后用另一个不同的名称再试一次。
+
+如果顺利地部署成功了，几秒钟后你就能够在 http://myapp.meteor.com 上访问到你的应用了。
+#### 部署在 Modulus
+[文档链接](部署在 Modulus)
 ### Meteor 应用的文件结构
 为了保持项目简洁，删除当前文件下的microscope.html、microscope.js 和 microscope.css。新建/client，/server，/public 和 /lib四个文件夹。结构如下：
 ```
