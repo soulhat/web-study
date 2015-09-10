@@ -22,6 +22,14 @@
   - [ ] [ipython](http://ipython.org)
   - [ ] [jupyter](http://jupyter.org)
 
+### 常用开源库
+* [Underscore](http://underscorejs.org)
+* [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择
+
+### 云服务商
+* [modulus](https://modulus.io)
+* [compose](https://www.compose.io)
+
 ### 开发工具
 * [nitrous](https://www.nitrous.io) 在线开发工具
 ### 参考站点
