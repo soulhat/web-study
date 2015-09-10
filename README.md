@@ -26,6 +26,7 @@
 * [Underscorejs](http://underscorejs.org)
 * [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择库
 * [momentjs](http://momentjs.com)
+* [revealjs](https://github.com/hakimel/reveal.js) 类ppt显示库
 
 ### 云服务商
 * [modulus](https://modulus.io)
