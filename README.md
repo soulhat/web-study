@@ -24,7 +24,7 @@
 
 ### 常用开源库
 * [Underscore](http://underscorejs.org)
-* [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择
+* [daterangepicker](http://www.daterangepicker.com) Bootstrap日期/时间范围选择库
 
 ### 云服务商
 * [modulus](https://modulus.io)
