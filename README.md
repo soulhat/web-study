@@ -22,6 +22,8 @@
   - [ ] [ipython](http://ipython.org)
   - [ ] [jupyter](http://jupyter.org)
 
+### 开发工具
+* [nitrous](https://www.nitrous.io) 在线开发工具
 ### 参考站点
 #### 英文站点
 * [Hacker News](https://news.ycombinator.com/news)
