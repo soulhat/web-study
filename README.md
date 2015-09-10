@@ -30,7 +30,7 @@
 ### 云服务商
 * [modulus](https://modulus.io)
 * [compose](https://www.compose.io)
-
+* [七牛](http://www.qiniu.com)
 ### 开发工具
 * [nitrous](https://www.nitrous.io) 在线开发工具
 ### 参考站点
