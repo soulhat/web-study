@@ -14,10 +14,10 @@ $ meteor
 ![](http://7xlot8.com1.z0.glb.clouddn.com/2-1.png)
 microscope目录结构如下：
 ```
-microscope
-    -microscope.css
-    -microscope.html
-    -microscope.js
+|-- microscope
+    |-- microscope.css
+    |-- microscope.html
+    |-- microscope.js
 ```
 ### 添加代码包
 ```
@@ -112,14 +112,14 @@ mup logs -f
 ### Meteor 应用的文件结构
 为了保持项目简洁，删除当前文件下的microscope.html、microscope.js 和 microscope.css。新建/client，/server，/public 和 /lib四个文件夹。结构如下：
 ```
-microscope
-    -client 
+|-- microscope
+    |-- client 
     // client中的代码只会在客户端运行
-    -server 
+    |-- server 
     // server中的代码只会在服务器端运行
-    -public 
+    |-- public 
     // 将所有的静态文件（字体，图片等）放置在public中
-    -lib
+    |-- lib
     // 其它代码则将同时运行于服务器端和客户端上
 ```
 #### Meteor 加载文件顺序
@@ -326,14 +326,14 @@ body {
 ```
 // 目前目录结构
 microscope
-    -client 
-        -stylesheets
-            -style.css
+    |-- client 
+        |-- stylesheets
+            |-- style.css
     // client中的代码只会在客户端运行
-    -server 
+    |-- server 
     // server中的代码只会在服务器端运行
-    -public 
+    |-- public 
     // 将所有的静态文件（字体，图片等）放置在public中
-    -lib
+    |-- lib
     // 其它代码则将同时运行于服务器端和客户端上
 ```
