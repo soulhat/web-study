@@ -11,7 +11,7 @@
    * [Meteor](app/meteor.md)
 * [Guide](guide/guide_summary.md)
    * [develop guide](guide/develop_guide.md)
-   * html css guide
+   * [html css guide](guide/html_css_guide.md)
 * [Javascript](javascript/javascript_summary.md)
    * [javascript](javascript/javascript.md)
    * [jquery](javascript/jquery.md)
